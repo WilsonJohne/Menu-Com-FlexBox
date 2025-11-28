@@ -1,0 +1,100 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: gray;
+}
+header{
+    text-align: center;
+    background-color: rgb(91, 91, 91);
+    color: white;
+    padding-bottom: 20px;
+}
+header{
+    position: relative;
+}
+header > h1{
+    padding: 10px;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+header > menu{
+    display:none;
+}
+header > menu > ul{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+header > menu > ul > li{
+    list-style: none;
+    flex: 1 1 ;
+    background-color: black;
+    width: 85vw;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color .5s;
+
+}
+header > menu > ul > li:hover{
+    background-color: white;
+    color: black;
+}
+main{
+    background-color: white;
+    margin: 10px auto;
+    width: 90vw;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1em;
+}
+p{
+    padding: 5px;
+}
+
+/* Hamburger icon */
+#mn.material-symbols-outlined{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* When menu receives .open it becomes visible on small screens */
+header > menu.open{
+    display: block;
+    padding-bottom: 12px;
+}
+
+/* Desktop: show menu as horizontal nav and hide hamburger */
+@media screen and (min-width: 769px){
+    #mn.material-symbols-outlined{
+        display: none;
+    }
+    header > menu{
+        display: block;
+    }
+    header > menu > ul{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        gap: 10px;
+        align-items: center;
+        padding: 10px;
+    }
+    header > menu > ul > li{
+        width: auto;
+        background-color: transparent;
+        padding: 8px 12px;
+        border-radius: 4px;
+    }
+    header > menu > ul > li:hover{
+        background-color: rgba(255,255,255,0.08);
+        color: white;
+    }
+}

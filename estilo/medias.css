@@ -1,0 +1,35 @@
+
+/*Typical Device Breakpoints
+---------------------------------
+pquenas telas: ate 600px
+Celular: de 600px ate 768px
+tablet: 769px ate 992px
+pc: 993px ate 1200px
+grandes telas: acima de 1200px
+*/
+
+@media screen and (min-width:769px) and (max-width:992px) {
+    header menu ul{
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+    header menu ul li{
+        max-width: 100px;
+    }
+    main{
+        width: 75vw;
+    }
+}
+@media screen and (min-width:993px)  {
+    header menu ul{
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+    header menu ul li{
+        max-width: 100px;
+    }
+    main{
+        width: 60vw;
+        
+    }
+}
